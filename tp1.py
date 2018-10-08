@@ -43,7 +43,7 @@ def CreateVectorF(n):
 	vectorF = np.array(0)
 	i = 1
 	while (i < n):
-		newElement = (((18 + (18**2) * ((L/n)-(L/n)**2))/E_I ) * ((L/n)**4))
+		newElement = (((18 + (18**2) * ((i*L/n)-(i*L/n)**2))/E_I ) * ((L/n)**4))
 		vectorF = np.append(vectorF, newElement)
 		i = i + 1 
 	vectorF = np.append(vectorF, 0)
