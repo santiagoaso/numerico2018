@@ -1,6 +1,7 @@
 import numpy as np
 import scipy.linalg as la
 import matplotlib.pyplot as plt
+import math as math
 
 L = 1
 E_I = 1
@@ -139,6 +140,14 @@ while (x < len(nes)):
 		plt.ylabel('Infinity Norm (log)')
 		plt.xlabel('Step')
 		plt.show()
+
+		print(" Ek+1 : " + str(res[len(res) - 1]))
+		print(" Ek   : " + str(res[len(res) - 2]))
+		print(" Ek-1 : " + str(res[len(res) - 3]))
+		ek1 = res[len(res) - 1] / res[len(res) - 2]
+		ek2 = res[len(res) - 2] / res[len(res) - 3]
+		result = math.log(ek1) / math.log(ek2)
+		print(" P    : " + str(result))
 
 	Graph(bestOmega)
 
